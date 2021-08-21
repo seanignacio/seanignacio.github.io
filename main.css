@@ -5,6 +5,17 @@
 }
 a {
     text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+ul {
+    list-style: none;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+}
+p span {
+    color: hsl(210, 18%, 70%);
+
 }
 body {
     height: 100vh;
@@ -21,40 +32,42 @@ body {
     text-align: center;
     border-bottom: 1px solid rgb(224, 224, 224);
     padding-bottom: 0.5em;
-    box-shadow: 0 5px 10px rgb(224, 224, 224);
+    box-shadow: 0 2px 20px rgb(224, 224, 224);
+}
+.profile {
+    display: inline-flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
 }
 img[alt="My Picture"] {
     border-radius: 50%;
-    margin: 1em 1em;
+    margin: 1em;
     width: 80%;
     max-width: 300px;
-    border: 5px solid hsl(210, 11%, 20%);
+    border: 5px solid hsl(210, 11%, 30%);
     box-sizing: content-box;
 }
 #my-name {
     font-size: 3em;
-    margin: 0 0 0 0;
-    display: block;
+    margin: 0;
 }
 #my-title {
     margin: 0 0 1em 0;
     padding: 0;
     color: hsl(210, 18%, 70%);
 }
-.profile {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
-}
-.folio-links {
-    list-style-type: none;
-    margin: 1em 0 0 0;
+.folio-links{
     padding: 0;
 }
 .folio-links li {
     display: inline-block;
     padding: 0 0.5em;
+    position: relative;
+    transition: transform 300ms ease-out;
+}
+.folio-links li:hover {
+    transform: translateY(10%);
 }
 .nav-container {
     display: flex;
@@ -64,22 +77,23 @@ img[alt="My Picture"] {
     align-items: center;
 }
 .nav-links {
-    list-style-type: none;
-    margin: 1.3em 0;
     padding: 0;
     font-size: 1.3em;
 }
 .nav-links li {
     display: inline-block;
-    padding: 0 1em;
+    margin: 1.3em 0.7em 0 0.7em;
     position: relative;
+}
+.nav-links li a {
+    font-family: 'Fjalla One', sans-serif;
 }
 .nav-links li::after {
     content: '';
     position: absolute;
     bottom: -3px;
-    left: 17%;
-    width: 65%;
+    left: 0;
+    width: 100%;
     height: 0.1em;
     background-color: hsl(210, 18%, 70%);
     transition: transform 300ms;
@@ -92,11 +106,6 @@ img[alt="My Picture"] {
     transform: scale(1);
 }
 .hero {
-    display: flex;
-    flex-flow: row wrap;
-    flex: 1 1 100%;
-    justify-content: space-around;
-    align-items: center;
     height: 80vh;
     background-image: linear-gradient(to top, rgba(33, 37, 41, 1), transparent), url("https://images.unsplash.com/photo-1602328142707-12b9c0476d59?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80");
     background-position: 50% 100%;
@@ -109,66 +118,51 @@ img[alt="My Picture"] {
 }
 .hero-content {
     display: flex;
-    flex: 1 1 100%;
     flex-flow: row wrap;
-    justify-content: space-around;
+    flex: 1 1 100%;
+    justify-content: center;
     align-items: center;
     text-align: center;
-}
-.hero-card {
     border: 2px solid rgb(99, 120, 141);
     box-shadow: 5px 5px 10px rgba(33, 37, 41, 1);
     padding: 1em;
     border-radius: 1em;
-    margin: 1.5em;
+    margin: 1.5em 0.5em;
     background-color: rgba(33, 37, 41, 0.7);
+    max-width: 450px;
 }
-.personal-details {
-    display: flex;
-    flex-flow: row no wrap;
-    flex: 0 0 100%;
-    justify-content: center;
-    align-items: center;
+.hero-card {
+    margin: 1em 0;
 }
-.details-1 li {
-    list-style: none;
-    text-align: left;
-    line-height: 2em;
-    color: hsl(210, 18%, 70%);
-}
-.details-2 li {
-    list-style: none;
-    text-align: left;
-    line-height: 2em;
-}
-.title-sub-header {
-    font-family: 'Style Script', cursive;
+.card-header {
+    font-family: 'Fjalla One', sans-serif;
     font-size: 3em;
     margin: 0;
 }
-.hero-content h1 {
-    margin: 0;
-    font-family: 'Style Script', cursive;
-    font-size: 4em;
+.card-title {
+    color:	hsl(210, 18%, 70%);
+    line-height: normal;
 }
-.hero-content h2 {
-    margin: 0;
-    font-size: 1.3em;
+.card-info {
+    line-height: 0.5em;
 }
-.about-text {
-    max-width: 450px;
+.card-link {
+    color: hsl(210, 18%, 60%);
+    text-decoration: underline;
 }
-.about-text span {
-    color: 	hsl(210, 18%, 70%);
+.card-link:hover {
+    color: hsl(210, 18%, 100%);
 }
-.flex-row-break {
-    flex-basis: 100%;
+@media (min-width: 451px) {
+    .hero-content {
+        margin: 1.5em auto;
+    }
 }
 @media (min-width: 1024px) {
     .container {
         align-items: flex-end;
         flex-flow: row wrap;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     img[alt="My Picture"] {
         margin: 1em 0.3em 0 2em;
@@ -182,11 +176,8 @@ img[alt="My Picture"] {
     }
     .profile {
         align-items: flex-end;
-        margin-bottom: 0;
     }
     .folio-links {
-        list-style-type: none;
         margin: 0 2em 0 0;
-        padding: 0;
     }
 }
