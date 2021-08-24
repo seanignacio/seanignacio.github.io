@@ -10,7 +10,7 @@ a {
 ul {
     list-style: none;
 }
-p {
+p, p span {
     font-family: 'Roboto', sans-serif;
 }
 p span {
@@ -106,15 +106,13 @@ img[alt="My Picture"] {
     transform: scale(1);
 }
 .hero {
-    height: 80vh;
+    height: 100vh;
     background-image: linear-gradient(to top, rgba(33, 37, 41, 1), transparent), url("https://images.unsplash.com/photo-1602328142707-12b9c0476d59?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80");
     background-position: 50% 100%;
     background-size: cover;
 }
 .hero-top-gradient {
     background-image: linear-gradient(to bottom, rgba(33, 37, 41, 1), transparent);
-    height: 100%;
-    width: 100%;
 }
 .hero-content {
     display: flex;
@@ -122,6 +120,9 @@ img[alt="My Picture"] {
     flex: 1 1 100%;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+}
+.summary {
     text-align: center;
     border: 2px solid rgb(99, 120, 141);
     box-shadow: 5px 5px 10px rgba(33, 37, 41, 1);
@@ -132,7 +133,7 @@ img[alt="My Picture"] {
     max-width: 450px;
 }
 .hero-card {
-    margin: 1em 0;
+    margin: 1em 0 2em 0;
 }
 .card-header {
     font-family: 'Fjalla One', sans-serif;
@@ -142,6 +143,7 @@ img[alt="My Picture"] {
 .card-title {
     color:	hsl(210, 18%, 70%);
     line-height: normal;
+    margin: 0;
 }
 .card-info {
     line-height: 0.5em;
