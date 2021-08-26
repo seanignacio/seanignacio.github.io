@@ -14,7 +14,7 @@ video {
     object-fit: cover;
 }
 .overlay {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.3);
     background-position: cover;
     position: absolute;
     right: 0;
@@ -51,10 +51,12 @@ a {
     font-size: 1em;
     color: white;
     cursor: pointer;
+    position: relative;
+    margin-right: 1.5em;
 }
 .nav-item.logo a {
     position: relative;
-    margin-right: 0.5em;
+    margin-right: 1em;
     font-size: 1.8em;
 }
 #chevron_down {
@@ -62,6 +64,8 @@ a {
     position: relative;
     bottom: 2px;
     padding-left: 0.3rem;
+    transition: all 300ms;
+    transform-origin: center;
 }
 .btn {
     border: 2px solid rgba(255, 255, 255, 0.4);
