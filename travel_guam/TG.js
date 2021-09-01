@@ -37,21 +37,21 @@ $(document).ready(() => {
 
     $("#lodging").click((e) => {
         $("#navDropLodging").slideToggle();
-        $("#lodging button").toggleClass("bg-blue");
-        $("#lodging button").toggleClass("yellow-text");
+        $("#lodging").toggleClass("bg-blue");
+        $("#lodging").toggleClass("yellow-text");
         $("#lodging #downArrow").toggleClass("left-arrow");
     });
     $("#dining").click(() => {
         $("#navDropDining").slideToggle();
-        $("#dining button").toggleClass("bg-blue");
-        $("#dining button").toggleClass("yellow-text");
+        $("#dining").toggleClass("bg-blue");
+        $("#dining").toggleClass("yellow-text");
         $("#dining #downArrow").toggleClass("left-arrow");
 
     });
     $("#activities").click(() => {
         $("#navDropActivities").slideToggle();
-        $("#activities button").toggleClass("bg-blue");
-        $("#activities button").toggleClass("yellow-text");
+        $("#activities").toggleClass("bg-blue");
+        $("#activities").toggleClass("yellow-text");
         $("#activities #downArrow").toggleClass("left-arrow");
     });
 })
