@@ -15,6 +15,7 @@ video {
     height: 100vh;
     z-index: 0;
     object-fit: cover;
+    object-position: 75% 50%;
 }
 div.overlay {
     background-color: rgba(0, 0, 0, 0.3);
