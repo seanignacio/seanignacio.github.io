@@ -67,6 +67,9 @@ button {
 #logo:hover {
     color: white;
 }
+#mobileNavBtn {
+    -webkit-tap-highlight-color: transparent;
+}
 .mobile-menu {
     position: absolute;
     display: flex;
