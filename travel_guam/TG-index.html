@@ -13,130 +13,288 @@
 <body>
     <!--Background Video-->
     <video src="ebb_and_flow-O.mp4" autoplay muted loop></video>
+
     <!--Background Overlay-->
     <div class="overlay"></div>
 
     <!--Menu Header-->
-    <nav class="header">
-        <ul class="nav-list">
-            <!-- Logo -->
-            <li class="nav-item logo">
-                <a role="menuitem" href="TG-index.html">
-                    Travel Guam
-                </a>
-            </li>
-            <!-- Navigation Dropdown -->
-            <li class="nav-item">
-                <button type="button" class="nav-drop-btn">
-                    Lodging
-                    <img src="arrow-down.png" alt="Arrow Down">
-                </button>
-                <ul class="dropdown-content">
-                    <a href="#">
-                        <li class="drop-item">
-                            Hotels
-                        </li>
-                    </a>
-                    <hr class="drop-item-hr">
-                    <a href="#">
-                        <li class="drop-item">
-                            BnB Listings
-                        </li>
-                    </a>
-                    <hr class="drop-item-hr">
-                    <a href="#">
-                        <li class="drop-item">
-                            Inns / Motels
-                        </li>
-                    </a>
-                </ul>
-            </li>
+    <div class="header">
+        <!-- Logo (Left)-->
+        <a href="TG-index.html" id="logo">
+            <h1>Travel Guam</h1>
+        </a>
+        <!--Mobile Nav Button (Right)-->
+        <button type="button" id="mobileNavBtn">
+            <img src="hamburger-menu-white.png" alt="Pullout Menu" width="35px" id="mobileNavOpen">
+            <img src="menu-close.png" alt="Close Menu" width="35px" id="mobileNavClose">
+        </button>
 
-            <li class="nav-item">
-                <button type="button" class="nav-drop-btn">
-                    Dining
-                    <img src="arrow-down.png" alt="Arrow Down">
-                </button>
-                <ul class="dropdown-content">
-                    <a href="#">
-                        <li class="drop-item">
-                            Casual Dining
-                        </li>
-                    </a>
-                    <hr class="drop-item-hr">
-                    <a href="#">
-                        <li class="drop-item">
-                            Gourmet Cuisine
-                        </li>
-                    </a>
-                    <hr class="drop-item-hr">
-                    <a href="#">
-                        <li class="drop-item">
-                            Sunset BBQ
-                        </li>
-                    </a>
-                </ul>
-            </li>
+        <!--Mobile Drop Menu-->
+        <div class="mobile-menu hidden" aria-hidden="true">
+            <div class="login">
+                <h4> <a href="#">Login</a></h4>
+                <a href="#"><button type="button" id="signIn">Sign Up</button></a>
+            </div>
+        <!--Mobile Accordion Menu-->
+            <ul class="mobile-accordion">
 
-            <li class="nav-item">
-                <button type="button" class="nav-drop-btn">
-                    Activities
-                    <img src="arrow-down.png" alt="Arrow Down">
-                </button>
-                <ul class="dropdown-content">
-                    <a href="#">
-                        <li class="drop-item">
-                            Sightseeing
-                        </li>
-                    </a>
-                    <hr class="drop-item-hr">
-                    <a href="#">
-                        <li class="drop-item">
-                            Hiking
-                        </li>
-                    </a>
-                    <hr class="drop-item-hr">
-                    <a href="#">
-                        <li class="drop-item">
-                            Snorkeling
-                        </li>
-                    </a>
-                    <hr class="drop-item-hr">
-                    <a href="#">
-                        <li class="drop-item">
-                            Dolphin Watching
-                        </li>
-                    </a>
-                    <hr class="drop-item-hr">
-                    <a href="#">
-                        <li class="drop-item">
-                            Scuba Diving
-                        </li>
-                    </a>
-                    <hr class="drop-item-hr">
-                    <a href="#">
-                        <li class="drop-item">
-                            Night Life
-                        </li>
-                    </a>
-                </ul>
-            </li>
-        </ul>
-        <!--Right Navigation-->
-        <ul class="nav-list">
-            <li class="nav-item">
-                <a role="menuitem" href="#" id="loginBtn">
-                    Log In
-                </a>
-            </li>
-            <li class="nav-item">
-                <a role="menuitem" href="#">
-                    <button class="btn">
-                        Sign Up
+                <li class="accordion-item-border" id="lodging">
+                    <button type="button" class="accordion-drop-btn">
+                        <span>
+                            Lodging
+                            <img src="arrow-down.png" alt="Down Arrow" width="14px" id="downArrow">
+                        </span>
                     </button>
-                </a>
-            </li>
-        </ul>
-    </nav>
+
+                    <ul class="accordion-drop-content" id="navDropLodging">
+                        <li>
+                            <a href="#">
+                                <div class="accordion-child">
+                                    Hotels
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="accordion-child">
+                                BnB Listings
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="accordion-child">
+                                Inns / Motels
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="accordion-item-border" id="dining">
+                    <button type="button" class="accordion-drop-btn">
+                        <span>
+                            Dining
+                            <img src="arrow-down.png" alt="Down Arrow" width="14px" id="downArrow">
+                        </span>
+                    </button>
+
+                    <ul class="accordion-drop-content" id="navDropDining">
+                        <li>
+                            <a href="#">
+                                <div class="accordion-child">
+                                    Casual Restaurants
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="accordion-child">
+                                    Family Banquets
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="accordion-child">
+                                    Fine Dining
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="accordion-child">
+                                    Sunset BBQ
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li class="accordion-item-border" id="activities">
+                    <button type="button" class="accordion-drop-btn">
+                        <span>
+                            Activities
+                            <img src="arrow-down.png" alt="Down Arrow" width="14px" id="downArrow">
+                        </span>
+                    </button>
+
+                    <ul class="accordion-drop-content" id="navDropActivities">
+                        <li>
+                            <a href="#">
+                                <div class="accordion-child">
+                                Sightseeing
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="accordion-child">
+                                Hiking
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="accordion-child">
+                                Snorkeling
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="accordion-child">
+                                Dolphin Watching
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="accordion-child">
+                                Scuba Diving
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="accordion-child">
+                                Night Life
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!--Desktop Menu Bar-->
+        <div id="lg-menu">
+            <ul class="nav-list">
+                <!-- Navigation Dropdown -->
+                <li class="nav-item">
+                    <button type="button" class="nav-drop-btn">
+                        Lodging
+                        <img src="arrow-down.png" alt="Arrow Down" id="downArrow">
+                    </button>
+                    <ul class="dropdown-content">
+                        <a href="#">
+                            <li class="drop-item">
+                                Hotels
+                            </li>
+                        </a>
+                        <hr class="drop-item-hr">
+                        <a href="#">
+                            <li class="drop-item">
+                                BnB Listings
+                            </li>
+                        </a>
+                        <hr class="drop-item-hr">
+                        <a href="#">
+                            <li class="drop-item">
+                                Inns / Motels
+                            </li>
+                        </a>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <button type="button" class="nav-drop-btn">
+                        Dining
+                        <img src="arrow-down.png" alt="Arrow Down" id="downArrow">
+                    </button>
+                    <ul class="dropdown-content">
+                        <a href="#">
+                            <li class="drop-item">
+                                Casual Dining
+                            </li>
+                        </a>
+                        <hr class="drop-item-hr">
+                        <a href="#">
+                            <li class="drop-item">
+                                Gourmet Cuisine
+                            </li>
+                        </a>
+                        <hr class="drop-item-hr">
+                        <a href="#">
+                            <li class="drop-item">
+                                Sunset BBQ
+                            </li>
+                        </a>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <button type="button" class="nav-drop-btn">
+                        Activities
+                        <img src="arrow-down.png" alt="Arrow Down" id="downArrow">
+                    </button>
+                    <ul class="dropdown-content">
+                        <a href="#">
+                            <li class="drop-item">
+                                Sightseeing
+                            </li>
+                        </a>
+                        <hr class="drop-item-hr">
+                        <a href="#">
+                            <li class="drop-item">
+                                Hiking
+                            </li>
+                        </a>
+                        <hr class="drop-item-hr">
+                        <a href="#">
+                            <li class="drop-item">
+                                Snorkeling
+                            </li>
+                        </a>
+                        <hr class="drop-item-hr">
+                        <a href="#">
+                            <li class="drop-item">
+                                Dolphin Watching
+                            </li>
+                        </a>
+                        <hr class="drop-item-hr">
+                        <a href="#">
+                            <li class="drop-item">
+                                Scuba Diving
+                            </li>
+                        </a>
+                        <hr class="drop-item-hr">
+                        <a href="#">
+                            <li class="drop-item">
+                                Night Life
+                            </li>
+                        </a>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--Right Navigation-->
+        <div id="lg-submenu">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a role="menuitem" href="#" id="loginBtn">
+                        Log In
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a role="menuitem" href="#">
+                        <button class="btn">
+                            Sign Up
+                        </button>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="TG.js"></script>
+    <!-- <script>
+        $(document).ready(() => {
+            $("#mobileNavDrop").click(() => {
+                $("#mobileNavDropContent").slideToggle()
+            })
+        })
+    </script> -->
 </body>
 </html>
