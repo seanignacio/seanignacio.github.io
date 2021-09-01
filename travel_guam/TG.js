@@ -22,9 +22,7 @@ $(document).ready(() => {
             $(".accordion-drop-btn").removeClass("bg-blue");
             $(".accordion-drop-btn").removeClass("yellow-text");
             $(".accordion-drop-content").slideUp();
-            if (!$(".down-arrow").hasClass("left-arrow")) {
-                $("#downArrow*").addClass("left-arrow");
-            }
+            $("#downArrow*").addClass("left-arrow");
             console.log("Conditional is working")
         }
     })
