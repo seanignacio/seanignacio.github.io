@@ -35,7 +35,7 @@ $(document).ready(() => {
         $navClosed.toggle();
     })
 
-    $("#lodging").click((e) => {
+    $("#lodging").click(() => {
         $("#navDropLodging").slideToggle();
         $("#lodging").toggleClass("bg-blue");
         $("#lodging").toggleClass("yellow-text");
