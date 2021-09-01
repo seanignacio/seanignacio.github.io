@@ -231,7 +231,7 @@ h1, h2, h3, h4 {
         transform-origin: center;
     }
     li.nav-item:hover #downArrow {
-        transform: rotateZ(90deg);
+        transform: rotateZ(0);
     }
     ul.dropdown-content {
         position: absolute;

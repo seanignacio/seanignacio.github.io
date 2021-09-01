@@ -21,8 +21,10 @@ $(document).ready(() => {
             $navClosed.toggle();
             $(".accordion-drop-btn").removeClass("bg-blue");
             $(".accordion-drop-btn").removeClass("yellow-text");
-            $("#downArrow").removeClass("left-arrow");
             $(".accordion-drop-content").slideUp();
+            if (!$(".down-arrow").hasClass("left-arrow")) {
+                $("#downArrow*").addClass("left-arrow");
+            }
             console.log("Conditional is working")
         }
     })
@@ -38,7 +40,12 @@ $(document).ready(() => {
         $navOpen.toggle();
         $navClosed.toggle();
     })
-
+    // $navClosed.on("click", () => {
+    //     $(".accordion-drop-btn").removeClass("bg-blue");
+    //     $(".accordion-drop-btn").removeClass("yellow-text");
+    //     $("#downArrow").removeClass("left-arrow");
+    //     $(".accordion-drop-content").slideUp();
+    // })
     $("#lodging").click(() => {
         $("#navDropLodging").slideToggle();
         $("#lodging button").toggleClass("bg-blue");
@@ -50,7 +57,6 @@ $(document).ready(() => {
         $("#dining button").toggleClass("bg-blue");
         $("#dining button").toggleClass("yellow-text");
         $("#dining #downArrow").toggleClass("left-arrow");
-
     });
     $("#activities").click(() => {
         $("#navDropActivities").slideToggle();
