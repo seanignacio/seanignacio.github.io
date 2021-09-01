@@ -19,6 +19,10 @@ $(document).ready(() => {
             $mobileMenu.removeClass("slide-in");
             $navOpen.toggle();
             $navClosed.toggle();
+            $(".accordion-drop-btn").removeClass("bg-blue");
+            $(".accordion-drop-btn").removeClass("yellow-text");
+            $("#downArrow").removeClass("left-arrow");
+            $(".accordion-drop-content").slideUp();
             console.log("Conditional is working")
         }
     })
