@@ -88,7 +88,7 @@ img[alt="My Picture"] {
 .nav-links li a {
     font-family: 'Fjalla One', sans-serif;
 }
-.nav-links li::after {
+.nav-links li a::after {
     content: '';
     position: absolute;
     bottom: -3px;
@@ -101,8 +101,18 @@ img[alt="My Picture"] {
     transform: scale(0);
     transform-origin: center;
 }
-.nav-links li:hover::after,
-.nav-links li:focus::after {
+.nav-links li a:hover::after {
+    transform: scale(1);
+}
+.nav-links li a.current::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: hsl(210, 18%, 70%);
+    opacity: 1;
     transform: scale(1);
 }
 .hero {
@@ -130,7 +140,7 @@ img[alt="My Picture"] {
     border-radius: 1em;
     margin: 1.5em 0.5em;
     background-color: rgba(33, 37, 41, 0.7);
-    max-width: 450px;
+    max-width: 470px;
 }
 .hero-card {
     margin: 1em 0 2em 0;
