@@ -8,25 +8,24 @@ body {
     color: white;
 }
 video {
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     width: 100%;
     height: 100vh;
-    z-index: 0;
     object-fit: cover;
     object-position: 75% 50%;
 }
-div.overlay {
-    background-color: rgba(0, 0, 0, 0.3);
-    background-position: cover;
-    position: absolute;
-    right: 0;
+/* div.overlay {
+    position: fixed;
+    right: 0;   
     top: 0;
     width: 100%;
     height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-position: cover;
     z-index: 1;
-}
+} */
 a {
     text-decoration: none;
     color: inherit;
@@ -48,10 +47,10 @@ button {
     cursor: pointer;
 }
 .header {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
     top: 0;
     right: 0;
     left: 0;
@@ -72,18 +71,15 @@ button {
     -webkit-tap-highlight-color: transparent;
 }
 .mobile-menu {
-    position: absolute;
-    display: flex;
-    background-color: rgba(33, 50, 65, 0.9);
-    flex-flow: column nowrap;
-    flex: 0 0 100%;
-    justify-content: center;
-    align-items: flex-end;
-    top: 100%;
-    width: 320px;
-    line-height: 3em;
-    transition: right 400ms ease;
+    position: fixed;
+    top: 50px;
     right: -320px;
+    width: 300px;
+    max-height: 75vh;
+    line-height: 3em;
+    background-color: rgba(33, 50, 65, 0.9);
+    transition: right 400ms ease;
+    overflow: scroll;
 }
 .hidden {
     visibility: hidden;
@@ -101,7 +97,7 @@ button {
 }
 .login {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
     padding: 1em 1em;
 }
@@ -238,7 +234,7 @@ h1, h2, h3, h4 {
         position: absolute;
         left: 0;
         top: -100em;
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: rgba(20, 47, 71, 0.95);
         border-radius: 5px;
         opacity: 0;
         width: 200px;
@@ -252,7 +248,7 @@ h1, h2, h3, h4 {
         padding: 5% 8%;
     }
     li.drop-item:hover {
-        background-color: rgba(0, 0, 0, 0.2);
+        background-color: rgba(20, 47, 71, 1);
     }
     .drop-item-hr {
         border: 1px solid rgba(255, 255, 255, 0.1);
@@ -272,5 +268,75 @@ h1, h2, h3, h4 {
     }
     .btn:hover {
         background-color: rgba(20, 47, 71, 0.9);
+    }
+}
+
+/* Showcase */
+.showcase-container {
+    position: relative;
+    margin: 8em 1em;
+    text-align: center;
+}
+.showcase-text {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.4);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1.3em 0;
+    border-radius: 0 4.5em 0 3em;
+}
+.showcase-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.3em;
+    font-family: 'Gabriela', serif;
+}
+.showcase-text h2 {
+    font-family: 'Petit Formal Script', cursive;
+    font-size: 1.3em;
+}
+.subcase-content {
+    position: relative;
+    color: black;
+}
+.button-BG {
+    display: inline-block;
+}
+#bookTripBtn {
+    position: relative;
+    left: 0;
+    margin-top: 1em;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5em 1.8em;
+    border: 1px solid white;
+    border-radius: 1em;
+    overflow: hidden;
+    transition: all 400ms ease;
+}
+#bookTripBtn:hover {
+    /* left: -10px; */
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+#bookTripBtn::after {
+    content: '>';
+    opacity: 0;
+    position: absolute;
+    margin-left: 0;
+    transition: margin-left 400ms ease;
+}
+#bookTripBtn:hover::after {
+    opacity: 1;
+    margin-left: 10px;
+}
+
+
+
+
+@media (min-width: 1024px) {
+    .showcase-text::before {
+        width: 515px;
+    }
+    .showcase-content span {
+        display: none;
     }
 }
